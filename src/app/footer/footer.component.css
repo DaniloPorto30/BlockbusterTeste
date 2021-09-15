@@ -1,0 +1,38 @@
+* {
+    text-decoration: none;
+  }
+  .card-footer {
+    background-color: #808080;
+    height: 65px;
+    display: flex;
+    width: 100%;
+    padding-top: 15px;
+  }
+  .footer-name {
+    margin: 0 auto;
+    font-size: 20px;
+  }
+  .footer-name a {
+    margin: 5px;
+  }
+  .footer-name b {
+    color: rgba(0, 0, 255, 0.555);
+  }
+  .footer-name,
+  #git {
+    color: black;
+  }
+  
+   /* Filmes Grid responsivo mobile */
+
+ @media screen and (max-width: 375px) {
+
+  .footer-name {
+    margin: 0 auto;
+    font-size: 15px;
+  }
+  .footer-name a {
+    margin: 1px;
+  }
+
+ }

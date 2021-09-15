@@ -1,0 +1,63 @@
+
+      <section class="grid3">
+        <div class="grid3-item">
+          <h4>Cadastro de Filmes:</h4>
+          <label >Nome: <input class="form-control" type="text" name="name" [(ngModel)]="filme.nome"  value=""/></label>
+          <label >Ano: <input class="form-control"type="text" name="ano" [(ngModel)]="filme.ano" value=""/></label>
+          <label >Diretor: <input class="form-control" type="text" name="autor" [(ngModel)]="filme.autor" value=""/></label>
+          <label >Gênero: <input class="form-control"type="text" name="genero" [(ngModel)]="filme.genero" value=""/></label>
+          <label >Descrição: <input class="form-control" type="text" name="descricao" [(ngModel)]="filme.descricao" value=""/></label>
+          <label >Imagem: <input class="form-control" type="text" name="url" [(ngModel)]="filme.url" value=""/></label>
+          <p>
+            <button  type="button" class="btn btn-info m-2 " (click)="cadastrar()" value="ok">Cadastrar</button> 
+            <button  type="button" class="btn btn-success m-2 " (click)="pesquisar()" [disabled]="">Pesquisar</button>
+          </p>
+          </div>
+
+        
+        <div class="grid3-item" > 
+          <h4>Filmes!</h4> 
+          <p>
+            O que é Blockbuster: Blockbuster é uma palavra de origem inglesa que indica um filme (ou outra expressão artística) produzido de forma exímia, sendo popular para muitas pessoas e que pode obter elevado sucesso financeiro. Um blockbuster também pode ser um romance ou outra manifestação cultural que tenha um elevado nível de popularidade.          </p>
+        </div>
+        
+        <div class="grid3-item">
+            <img [src]="banner">
+            <h5>Os Melhores Filmes!</h5>
+        </div>
+       
+      </section>
+      
+
+
+  <table class="filmes" *ngFor="let filme of filmes" id="mais">
+          <tr>
+          <th>#Id</th>
+          <th>Nome:</th>
+          <th>Ano:</th>
+          <th>Diretor:</th>
+          <th>Gênero:</th>
+          <th>Descrição:</th>
+          <th>Imagem:</th>
+          <th>Acao:</th>
+          </tr>
+          <tr>
+      <td>{{filme.id}}</td>
+      <td>{{filme.nome}}</td>
+     <td>{{filme.ano}}</td>
+     <td>{{filme.autor}}</td>
+      <td>{{filme.genero}}</td>
+      <td id="desc">{{filme.descricao}}</td>
+      <td><img id="img200" [src]="filme.url" alt="img200"></td>
+      
+      <td> <button  type="button" class="btn btn-warning"(click)="editar(filme.id)">Editar</button>
+        <button  type="button" class="btn btn-danger"(click)="deletar(filme.id)">Deletar</button>
+      </td>
+   
+       </tr>
+      </table>
+    
+    
+    
+    
+

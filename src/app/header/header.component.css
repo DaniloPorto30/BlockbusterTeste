@@ -1,0 +1,59 @@
+.card-header .image img{
+    display: inline;
+    height: 120px;
+    padding-right: 40px;
+  }
+.card-header .btn img{
+  margin-right: -25px;
+  width:220px;
+}
+.card-header .btn b{
+  margin-left: 18px;
+  margin-right: 5px;
+}
+.card-header .btn{
+    background-color: #0e3fa9;
+    color: #ffa903;
+}
+.card-header{
+    background-color: gray;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+  }
+  .card-header button{
+  margin: 30px 30px 10px 10px;
+  align-items: center;
+  }
+  #pesquisar{
+    height: 50px;
+    width: 90px;
+}
+
+ /* Filmes Grid responsivo mobile */
+
+ @media screen and (max-width: 375px) {
+  .card-header button{
+    margin: 5px 5px 5px 0px;
+    align-items: center;
+    padding: 0px;
+    height: 50px;
+    }
+    #pesquisar{
+      height: 50px;
+      width: 90px;
+  }
+  .card-header{
+    padding-bottom:10px ;
+    margin-bottom: 35px;
+  }
+  .card-header .image img{
+   height:80px;
+  
+  }
+  .card-header h1{
+    height:50px;
+    padding:-20px
+  }
+
+ }

@@ -1,0 +1,31 @@
+<div class="card-header">
+    <h2>Lista de Filmes:</h2>
+</div>
+  <div class="filmes-grid">
+      <div class="box"
+      *ngFor="let filme of filmes">
+        <h2>{{filme.id}}</h2>
+        <h3>{{filme.nome}}</h3>
+        <div class="image">
+            <img [src]="filme.url" alt="filme">
+        </div>
+        <div class="info">
+          <h5>
+            <b>Ano:</b> {{ filme.ano}}
+          </h5>
+          <p>
+            <b>Autor: {{ filme.autor }}</b>
+          </p>
+          <p>
+            <b></b> {{filme.genero}}
+          </p>
+          <p>
+            <b>Descrição:</b> {{ filme.descricao }}
+          </p>
+          
+        </div>
+        <p id="bt"> 
+          <button  type="button" class="btn btn-outline-light">Trailer</button>
+        </p>
+      </div>
+    </div>
